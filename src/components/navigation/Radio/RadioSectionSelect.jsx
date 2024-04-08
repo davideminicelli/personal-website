@@ -9,8 +9,6 @@ import { NavigationCopy } from "@/copy/NavigationCopy";
 const RadioSectionSelect = ({}) => {
   const { stage, setStage, language } = useContext(PageContext);
 
-  const Option = () => {};
-
   return (
     <div className="w-full px-4 py-16">
       <div className="mx-auto w-full max-w-md">
@@ -18,21 +16,25 @@ const RadioSectionSelect = ({}) => {
           <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
           <div className="space-y-2">
             <RadioOption
+              language={language}
               stage={stage}
               label={NavigationCopy.radio[language].bio}
               value="bio"
             />
             <RadioOption
+              language={language}
               stage={stage}
               label={NavigationCopy.radio[language].career}
               value="career"
             />
             <RadioOption
+              language={language}
               stage={stage}
               label={NavigationCopy.radio[language].skills}
               value="skills"
             />
             <RadioOption
+              language={language}
               stage={stage}
               label={NavigationCopy.radio[language].contacts}
               value="contacts"
