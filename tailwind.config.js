@@ -17,6 +17,9 @@ module.exports = {
         "background": "var(--background-color)",
         "copy": "var(--copy-color)",
         "accent": "var(--accent-color)",
+        // primary and secondary
+        "primary": "var(--primary-color)",
+        "secondary": "var(--secondary-color)",
       }
     },
   },

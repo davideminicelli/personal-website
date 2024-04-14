@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #008080;
+  --background-color: #262336;
   --copy-color: #030303;
   --accent-color: #f8911c;
+  --primary-color: #f8911c;
+  --secondary-color: #f8911c;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -20,4 +22,8 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer components {
+
 }

@@ -12,5 +12,8 @@ export const NavigationCopy = {
             "skills": "Skills",
             "contacts": "Contacts"
         }
+    },
+    "menu-elements" : {
+        
     }
 }

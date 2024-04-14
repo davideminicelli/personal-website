@@ -3,6 +3,9 @@ import { RadioGroup } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const RadioOption = ({ stage, value, language }) => {
+  const duration = 0.2;
+  const distance = 20;
+
   return (
     <RadioGroup.Option
       key={`radio_option_${value}_key`}
@@ -16,45 +19,43 @@ const RadioOption = ({ stage, value, language }) => {
       }
     >
       {({ active, checked }) => (
-        <>
-          <div className="flex w-full items-center justify-between">
-            <div className="flex items-center">
-              <div className="text-sm">
-                <RadioGroup.Label
-                  as="p"
-                  className={`font-medium  ${
-                    checked ? "text-white" : "text-gray-900"
-                  }`}
-                >
-                  <AnimatePresence mode="wait">
-                    {language === "en" && (
-                      <motion.p
-                        key={`radio_option_${value}_motion_en_key`}
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        {NavigationCopy.radio.en[value]}
-                      </motion.p>
-                    )}
-                    {language === "it" && (
-                      <motion.p
-                        key={`radio_option_${value}_motion_it_key`}
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        {NavigationCopy.radio.it[value]}
-                      </motion.p>
-                    )}
-                  </AnimatePresence>
-                </RadioGroup.Label>
-              </div>
+        <div className="flex w-full items-center justify-between">
+          <div className="flex items-center">
+            <div className="text-sm">
+              <RadioGroup.Label
+                as="p"
+                className={`font-medium  ${
+                  checked ? "text-white" : "text-gray-900"
+                }`}
+              >
+                <AnimatePresence mode="wait">
+                  {language === "en" && (
+                    <motion.p
+                      key={`radio_option_${value}_motion_en_key`}
+                      initial={{ opacity: 0, y: -distance }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: distance }}
+                      transition={{ duration: duration, ease: "easeInOut" }}
+                    >
+                      {NavigationCopy.radio.en[value]}
+                    </motion.p>
+                  )}
+                  {language === "it" && (
+                    <motion.p
+                      key={`radio_option_${value}_motion_it_key`}
+                      initial={{ opacity: 0, y: -distance }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: distance }}
+                      transition={{ duration: duration, ease: "easeInOut" }}
+                    >
+                      {NavigationCopy.radio.it[value]}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
+              </RadioGroup.Label>
             </div>
           </div>
-        </>
+        </div>
       )}
     </RadioGroup.Option>
   );
