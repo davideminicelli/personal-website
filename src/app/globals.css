@@ -6,6 +6,7 @@
   --background-color: #262336;
   --copy-color: #030303;
   --accent-color: #f8911c;
+  --accent-off-color: #b84f2f;
   --primary-color: #f8911c;
   --secondary-color: #f8911c;
 }
@@ -18,6 +19,13 @@
   }
 } */
 
+body {
+  background-color: #262336;
+background-image: url("/images/texture.svg");
+background-repeat: repeat;
+background-attachment: fixed;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -25,5 +33,13 @@
 }
 
 @layer components {
+
+.main-title {
+  @apply text-5xl uppercase text-accent;
+}
+
+.main-subtitle {
+  @apply mb-4 text-3xl font-medium text-accent-off;
+}
 
 }

@@ -6,16 +6,16 @@ const Burger = ({ isOpen, setIsOpen, ...props }) => {
     >
       <div className={`relative h-6 w-8`}>
         <div
-          className={`burgerLine line1 ${isOpen ? "line1Trans bg-white" : "bg-primary"}`}
+          className={`burgerLine absolute top-0 ${isOpen ? "bg-white opacity-0" : "bg-primary"}`}
         />
         <div
-          className={`burgerLine line2 ${isOpen ? "line2Trans bg-white" : "bg-primary"}`}
+          className={`burgerLine absolute top-1/2 -translate-y-1/2 transform ${isOpen ? "rotate-45 bg-white" : "bg-primary"}`}
         />
         <div
-          className={`burgerLine line2 ${isOpen ? "line2TransRev bg-white" : "bg-primary"}`}
+          className={`burgerLine absolute top-1/2 -translate-y-1/2 transform ${isOpen ? "-rotate-45 bg-white" : "bg-primary"}`}
         />
         <div
-          className={`burgerLine line3 ${isOpen ? "line3Trans bg-white" : "bg-primary"}`}
+          className={`burgerLine absolute bottom-0 ${isOpen ? "bg-white opacity-0" : "bg-primary"}`}
         />
       </div>
     </div>

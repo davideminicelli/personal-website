@@ -9,7 +9,7 @@ const LanguageDial = () => {
 
   return (
     <div className="flex flex-nowrap gap-2 text-sm text-white">
-      <p>IT</p>
+      <p>EN</p>
       <Switch
         checked={language === "it"}
         onChange={
@@ -26,7 +26,7 @@ const LanguageDial = () => {
           } inline-block h-4 w-4 transform rounded-full bg-white transition`}
         />
       </Switch>
-      <p>EN</p>
+      <p>IT</p>
     </div>
   );
 };

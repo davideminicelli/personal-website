@@ -4,7 +4,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/stages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
@@ -17,6 +17,7 @@ module.exports = {
         "background": "var(--background-color)",
         "copy": "var(--copy-color)",
         "accent": "var(--accent-color)",
+        "accent-off": "var(--accent-off-color)",
         // primary and secondary
         "primary": "var(--primary-color)",
         "secondary": "var(--secondary-color)",
