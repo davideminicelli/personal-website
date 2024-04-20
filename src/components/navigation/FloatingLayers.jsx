@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
-import "./FloatingOverlays.scss";
+import "./Navigation.scss";
 import ContactsBurger from "./FloatingMenus/ContactsBurger";
 
 import Burger from "./FloatingMenus/floatingNav/Burger";
 import FloatingNav from "./FloatingMenus/floatingNav/FloatingNav";
 import FloatingContacts from "./FloatingMenus/floatingContacts/FloatingContacts";
+
+const distance = 6;
 
 const FloatingLayers = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +16,9 @@ const FloatingLayers = () => {
   return (
     <div className="relative md:hidden">
       <div
-        className={`fixed left-0 w-full bg-white ${isOpen ? "top-0" : "-top-full"} z-0 duration-300 ease-in-out`}
+        className={`fixed left-0 w-full bg-white ${isOpen ? "top-0" : "-top-full"} z-10 duration-300 ease-in-out`}
       >
-        <div className="fixed right-10 top-10 z-10">
+        <div className={`fixed right-6 top-6 z-10`}>
           <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
         <FloatingNav />
@@ -26,7 +28,7 @@ const FloatingLayers = () => {
       <div
         className={`fixed left-0 w-full bg-primary text-white ${isContactsOpen ? "bottom-0" : "-bottom-full"} z-10 duration-300 ease-in-out`}
       >
-        <div className="fixed bottom-10 right-10 z-10">
+        <div className="fixed bottom-6 right-6 z-10">
           <ContactsBurger
             isOpen={isContactsOpen}
             setIsOpen={setIsContactsOpen}
