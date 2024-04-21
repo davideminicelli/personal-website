@@ -7,7 +7,7 @@ import FloatingLayers from "@/components/navigation/FloatingLayers";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Davide Minicelli",
+  title: "Davide Minicelli - Web Developer",
   description: "Sviluppatore front end / Front end developer",
 };
 
