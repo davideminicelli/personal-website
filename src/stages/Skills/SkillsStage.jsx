@@ -137,26 +137,32 @@ const SkillsStage = () => {
 
   return (
     <div>
-      <h1 className="main-title">Skills</h1>
-      <div>
+      <header className="mb-8">
+        <h1 className="main-title">Skills</h1>
         <h2 className="main-subtitle">
           <LanguageSwitch en="Styling & Animations" it="Styling & Animazioni" />
         </h2>
-        <div className="flex flex-wrap">
-          {skillsList
-            .filter((skill) => skill.category === "styling")
-            .map((skill, index) => (
-              <div key={`${skill.name}_key`}>
-                <SkillPill
-                  imageUrl={skill.url}
-                  delay={initialDelay + delayIncrement * index}
-                  description={skill.description}
-                >
-                  {skill.name}
-                </SkillPill>
-              </div>
-            ))}
-        </div>
+        <p>
+          <LanguageSwitch
+            en="Click/hover on each skill to learn more about it."
+            it="Clicca/passa sopra ogni competenza per saperne di più."
+          />
+        </p>
+      </header>
+      <div className="flex flex-wrap">
+        {skillsList
+          .filter((skill) => skill.category === "styling")
+          .map((skill, index) => (
+            <div key={`${skill.name}_key`}>
+              <SkillPill
+                imageUrl={skill.url}
+                delay={initialDelay + delayIncrement * index}
+                description={skill.description}
+              >
+                {skill.name}
+              </SkillPill>
+            </div>
+          ))}
       </div>
       <div>
         <h2 className="main-subtitle">

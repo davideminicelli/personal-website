@@ -13,10 +13,10 @@ const ContactsBurger = ({ isOpen, setIsOpen, ...props }) => {
         />
 
         <div
-          className={`burgerLine absolute top-1/2 ${isOpen ? "-translate-y-1/2 rotate-45 bg-primary opacity-0" : "-translate-x-1/4 -translate-y-3/4 rotate-45 scale-50 bg-white"}`}
+          className={`burgerLine-thick absolute top-1/2 ${isOpen ? "-translate-y-1/2 rotate-45 bg-primary opacity-0" : "-translate-x-1/4 -translate-y-3/4 rotate-45 scale-50 bg-white"}`}
         />
         <div
-          className={`burgerLine absolute top-1/2 ${isOpen ? "-translate-y-1/2 -rotate-45 bg-primary opacity-0" : "-translate-y-3/4 translate-x-1/4 -rotate-45 scale-50 bg-white"}`}
+          className={`burgerLine-thick absolute top-1/2 ${isOpen ? "-translate-y-1/2 -rotate-45 bg-primary opacity-0" : "-translate-y-3/4 translate-x-1/4 -rotate-45 scale-50 bg-white"}`}
         />
 
         <div

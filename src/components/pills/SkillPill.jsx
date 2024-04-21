@@ -77,7 +77,14 @@ const SkillPill = ({ imageUrl, delay, description, children }) => {
               }}
               className="fixed bottom-0 left-0 z-10 box-border h-auto w-full"
             >
-              <p className="bg-primary p-4 text-white">
+              <p className="flex bg-primary p-4 text-white">
+                <Image
+                  src={"/images/info-icon.png"}
+                  width={20}
+                  height={20}
+                  alt="info icon"
+                  className="mr-6 h-6 w-6 fill-white stroke-white"
+                />
                 <LanguageSwitch en={description.en} it={description.it} />
               </p>
             </motion.div>

@@ -2,7 +2,7 @@ import StageProvider from "@/stages/StageProvider";
 
 export default function Home() {
   return (
-    <main>
+    <main className="py-10">
       <StageProvider />
     </main>
   );

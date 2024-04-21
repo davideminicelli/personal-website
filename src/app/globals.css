@@ -39,7 +39,7 @@ background-attachment: fixed;
 }
 
 .main-subtitle {
-  @apply mb-4 text-3xl font-medium text-accent-off;
+  @apply mb-3 mt-5 text-3xl font-medium text-accent-off;
 }
 
 }

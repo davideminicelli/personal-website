@@ -8,7 +8,7 @@ const FloatingContacts = () => {
   const { language, setStage } = useContext(PageContext);
 
   return (
-    <div className="mx-auto bg-primary p-6 text-2xl font-bold text-white">
+    <div className="mx-auto bg-primary p-6 pb-12 font-bold text-white">
       <ul
         key="en_nav"
         initial={{ opacity: 0, y: -20 }}
@@ -16,20 +16,35 @@ const FloatingContacts = () => {
         exit={{ opacity: 0, y: 20 }}
         className="floating-menu-list"
       >
-        <li onClick={() => setStage("home")} className="floating-menu-item">
-          <LanguageSwitch en="Home" it="Home" />
-        </li>
-        <li onClick={() => setStage("skills")} className="floating-menu-item">
-          <LanguageSwitch en="Skills" it="Competenze" />
-        </li>
-        <li onClick={() => setStage("contacts")} className="floating-menu-item">
+        <h2 className="text-2xl">
           <LanguageSwitch en="Contacts" it="Contatti" />
-        </li>
-        <li onClick={() => setStage("career")} className="floating-menu-item">
-          <LanguageSwitch en="Career" it="Carriera" />
-        </li>
+        </h2>
+        <div className="mb-2 mt-4">
+          <h3>
+            <LanguageSwitch en="Email" it="Email" />
+          </h3>
+          <a href="mailto:dminicelli@gmail.com">dminicelli@gmail.com</a>
+        </div>
+        <div className="mb-2 mt-4">
+          <h3>
+            <LanguageSwitch en="Phone" it="Tel." />
+          </h3>
+          <a href="tel:+447535867090">+44 7535 867090</a>
+        </div>
+        <div className="mb-2 mt-4">
+          <h3>
+            <LanguageSwitch en="LinkedIn" it="LinkedIn" />
+          </h3>
+          <a
+            href="https://www.linkedin.com/in/davide-minicelli/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Davide Minicelli - LinkedIn Profile
+          </a>
+        </div>
       </ul>
-      <div className="mt-4 flex justify-end pr-6">
+      <div className="mt-4 flex justify-start pr-6">
         <LanguageDial />
       </div>
     </div>

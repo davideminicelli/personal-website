@@ -21,7 +21,7 @@ const FloatingLayers = () => {
         <div className={`fixed right-6 top-6 z-10`}>
           <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
-        <FloatingNav />
+        <FloatingNav setIsOpen={setIsOpen} />
       </div>
 
       {/* contacts bottom floating menu */}
