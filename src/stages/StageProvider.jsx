@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useContext } from "react";
 import HomeStage from "./Home/HomeStage";
 import SkillsStage from "./Skills/SkillsStage";
+import ContactsStage from "./Contacts/ContactsStage";
+import CareerStage from "./Career/CareerStage";
 
 const StageProvider = () => {
   const { stage } = useContext(PageContext);
@@ -29,7 +31,7 @@ const StageProvider = () => {
             exit={{ opacity: 0 }}
             key={"career_stage"}
           >
-            <h1>Career</h1>
+            <CareerStage />
           </motion.div>
         )}
         {stage === "skills" && (
@@ -49,7 +51,7 @@ const StageProvider = () => {
             exit={{ opacity: 0 }}
             key={"contacts_stage"}
           >
-            <h1>Contacts</h1>
+            <ContactsStage />
           </motion.div>
         )}
       </AnimatePresence>

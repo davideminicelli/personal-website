@@ -1,4 +1,5 @@
 import LanguageSwitch from "@/components/Utility/LanguageSwitch";
+import ListNavigation from "@/components/navigation/ListNavigation/ListNavigation";
 
 const HomeStage = () => {
   return (
@@ -13,6 +14,12 @@ const HomeStage = () => {
           en="I'm a front-end web developer enthusiastic about crafting engaging digital experiences. With skills in HTML, CSS, JavaScript, React, and Next.js, I specialize in building user-friendly websites and web applications. I'm dedicated to delivering high-quality work and contributing to meaningful projects."
         />
       </p>
+      <div>
+        <h2 className="main-subtitle">
+          <LanguageSwitch it="Esplora:" en="Explore:" />
+        </h2>
+        <ListNavigation />
+      </div>
     </div>
   );
 };

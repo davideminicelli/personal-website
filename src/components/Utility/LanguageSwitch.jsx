@@ -12,9 +12,9 @@ const LanguageSwitch = ({ en = "no eng input", it = "nessun input ita" }) => {
       {language === "en" && (
         <motion.span
           key={`${en}_key`}
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
+          exit={{ opacity: 0, y: 10 }}
           className="inline-block"
         >
           {en}
@@ -23,9 +23,9 @@ const LanguageSwitch = ({ en = "no eng input", it = "nessun input ita" }) => {
       {language === "it" && (
         <motion.span
           key={`${it}_key`}
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
+          exit={{ opacity: 0, y: 10 }}
           className="inline-block"
         >
           {it}

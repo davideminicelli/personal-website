@@ -1,24 +1,12 @@
-import LanguageDial from "@/components/Buttons/LanguageDial";
 import LanguageSwitch from "@/components/Utility/LanguageSwitch";
-import { PageContext } from "@/contexts/PageContext";
-import { AnimatePresence, motion } from "framer-motion";
-import { useContext } from "react";
 
-const FloatingContacts = () => {
-  const { language, setStage } = useContext(PageContext);
-
+const ContactsStage = () => {
   return (
-    <div className="mx-auto bg-primary p-6 pb-12 font-bold text-white">
-      <div
-        key="en_nav"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        className="floating-menu-list"
-      >
-        <h2 className="text-2xl">
-          <LanguageSwitch en="Contacts" it="Contatti" />
-        </h2>
+    <>
+      <h1 className="main-title">
+        <LanguageSwitch en="Contacts" it="Contatti" />
+      </h1>
+      <div className="mt-8">
         <div className="mb-2 mt-4">
           <h3>
             <LanguageSwitch en="Email" it="Email" />
@@ -44,11 +32,8 @@ const FloatingContacts = () => {
           </a>
         </div>
       </div>
-      <div className="mt-4 flex justify-start pr-6">
-        <LanguageDial />
-      </div>
-    </div>
+    </>
   );
 };
 
-export default FloatingContacts;
+export default ContactsStage;

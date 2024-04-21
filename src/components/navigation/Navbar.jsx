@@ -15,9 +15,9 @@ const Navbar = () => {
           {language === "en" && (
             <motion.ul
               key="en_nav"
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
+              exit={{ opacity: 0, y: 10 }}
               className="mx-auto mr-4 flex list-none justify-between gap-4 leading-none"
             >
               <li
@@ -49,9 +49,9 @@ const Navbar = () => {
           {language === "it" && (
             <motion.ul
               key="it_nav"
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
+              exit={{ opacity: 0, y: 10 }}
               className="mx-auto mr-4 flex list-none justify-between gap-4 leading-none"
             >
               <li
