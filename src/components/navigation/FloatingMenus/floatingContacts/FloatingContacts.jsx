@@ -44,9 +44,6 @@ const FloatingContacts = () => {
           </a>
         </div>
       </div>
-      <div className="mt-4 flex justify-start pr-6">
-        <LanguageDial />
-      </div>
     </div>
   );
 };

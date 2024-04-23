@@ -1,7 +1,7 @@
 const Burger = ({ isOpen, setIsOpen, ...props }) => {
   return (
     <div
-      className={`cursor-pointer ${isOpen ? "bg-primary" : "bg-white"} flex h-14 w-14 items-center justify-center rounded-full`}
+      className={`cursor-pointer ${isOpen ? "bg-primary" : "bg-white"} flex h-14 w-14 items-center justify-center pl-4 pr-2`}
       onClick={() => setIsOpen(isOpen ? false : true)}
     >
       <div className={`relative h-6 w-8`}>
