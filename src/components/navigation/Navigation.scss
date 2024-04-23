@@ -17,6 +17,6 @@
     }
 
     .floating-menu-item {
-      @apply cursor-pointer leading-none hover:text-secondary py-4;
+      @apply cursor-pointer leading-none hover:text-accent-off py-4 duration-200;
     }
   }

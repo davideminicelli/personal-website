@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
           <Navbar />
           <FloatingLayers />
           <div className="mt-24 w-11/12 max-w-screen-lg mx-auto">
-
           {children}
           </div>
           </body>

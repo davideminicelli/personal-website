@@ -136,7 +136,7 @@ const SkillsStage = () => {
   ];
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <header className="mb-8">
         <h1 className="main-title">Skills</h1>
         <h2 className="main-subtitle">

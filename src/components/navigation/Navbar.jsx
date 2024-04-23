@@ -22,25 +22,25 @@ const Navbar = () => {
             >
               <li
                 onClick={() => setStage("home")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off "
               >
                 Home
               </li>
               <li
                 onClick={() => setStage("skills")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off"
               >
                 Skills
               </li>
               <li
                 onClick={() => setStage("contacts")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off"
               >
                 Contacts
               </li>
               <li
                 onClick={() => setStage("career")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off"
               >
                 Career
               </li>
@@ -56,25 +56,25 @@ const Navbar = () => {
             >
               <li
                 onClick={() => setStage("home")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className=":text-accent-off cursor-pointer leading-none"
               >
                 Home
               </li>
               <li
                 onClick={() => setStage("skills")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off"
               >
                 Competenze
               </li>
               <li
                 onClick={() => setStage("contacts")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off"
               >
                 Contatti
               </li>
               <li
                 onClick={() => setStage("career")}
-                className="cursor-pointer leading-none hover:text-secondary"
+                className="cursor-pointer leading-none hover:text-accent-off"
               >
                 Carriera
               </li>
