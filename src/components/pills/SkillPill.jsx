@@ -77,16 +77,27 @@ const SkillPill = ({ imageUrl, delay, description, children }) => {
               }}
               className="fixed bottom-0 left-0 z-10 box-border h-auto w-full"
             >
-              <p className="flex bg-primary p-4 text-white">
-                <Image
-                  src={"/images/info-icon.png"}
-                  width={20}
-                  height={20}
-                  alt="info icon"
-                  className="mr-6 h-6 w-6 fill-white stroke-white"
-                />
-                <LanguageSwitch en={description.en} it={description.it} />
-              </p>
+              {/* <Image
+                src={"/images/info-icon.png"}
+                width={20}
+                height={20}
+                alt="info icon"
+                className="absolute left-1/2 top-1/2 h-auto w-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20"
+              /> */}
+              <div className="flex bg-primary p-4 text-white">
+                <p
+                // style={{ backgroundImage: "url('/images/info-icon.png')" }}
+                >
+                  <LanguageSwitch en={description.en} it={description.it} />
+                </p>
+                <div
+                  className="absolute -top-6 right-6 h-12 w-12 cursor-pointer rounded-full bg-primary"
+                  onClick={() => setShowDesc(false)}
+                >
+                  <div className="absolute left-1/2 top-1/2 h-[4px] w-8 origin-center -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white duration-200 ease-in-out" />
+                  <div className="absolute left-1/2 top-1/2 h-[4px] w-8 origin-center -translate-x-1/2 -translate-y-1/2 -rotate-45 bg-white duration-200 ease-in-out" />
+                </div>
+              </div>
             </motion.div>
           </>
         )}

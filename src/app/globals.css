@@ -11,13 +11,6 @@
   --secondary-color: #f8911c;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: 150, 0, 0;
-    --copy-color: 214, 219, 220;
-    --accent-color: 12, 255, 255;
-  }
-} */
 
 body {
   background-color: #262336;
