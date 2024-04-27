@@ -12,7 +12,7 @@ const ListNavigation = () => {
   const ListButton = ({ iconUrl, targetStage, en, it }) => {
     return (
       <div
-        className="my-2 box-border flex h-16 max-w-96 items-center justify-start rounded-xl bg-primary bg-opacity-75 p-4 duration-200 hover:bg-accent-off"
+        className="my-2 box-border flex h-16 items-center justify-start rounded-xl bg-primary bg-opacity-75 p-4 duration-200 hover:bg-accent-off lg:my-0"
         onClick={() => {
           if (stage !== targetStage) setStage(targetStage);
         }}
@@ -32,7 +32,7 @@ const ListNavigation = () => {
   };
 
   return (
-    <div className="cursor-pointer">
+    <div className="max-w-96 cursor-pointer grid-cols-2 gap-2 lg:grid lg:max-w-full">
       {/* home, skills, career, contacts */}
       <ListButton
         iconUrl="/images/icon-home.svg"

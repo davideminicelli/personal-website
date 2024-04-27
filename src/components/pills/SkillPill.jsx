@@ -7,6 +7,7 @@ import LanguageSwitch from "../Utility/LanguageSwitch";
 
 const SkillPill = ({ imageUrl, delay, description, children }) => {
   const [showDesc, setShowDesc] = useState(false);
+  const [isStill, setIsStill] = useState(false);
 
   const node = useRef();
 
@@ -38,6 +39,7 @@ const SkillPill = ({ imageUrl, delay, description, children }) => {
       onHoverEnd={() => setShowDesc(false)}
       onBlur={() => setShowDesc(false)}
       onClick={() => setShowDesc(!showDesc)}
+      onAnimationComplete={() => setIsStill(true)}
       transition={{
         delay,
         duration: 0.5,
@@ -59,7 +61,7 @@ const SkillPill = ({ imageUrl, delay, description, children }) => {
         <p className="mx-4 overflow-hidden font-medium uppercase">{children}</p>
       </div>
       <AnimatePresence>
-        {showDesc && description && (
+        {showDesc && description && isStill && (
           <>
             <motion.div
               initial={{
@@ -77,17 +79,8 @@ const SkillPill = ({ imageUrl, delay, description, children }) => {
               }}
               className="fixed bottom-0 left-0 z-10 box-border h-auto w-full"
             >
-              {/* <Image
-                src={"/images/info-icon.png"}
-                width={20}
-                height={20}
-                alt="info icon"
-                className="absolute left-1/2 top-1/2 h-auto w-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20"
-              /> */}
               <div className="flex bg-primary p-4 text-white">
-                <p
-                // style={{ backgroundImage: "url('/images/info-icon.png')" }}
-                >
+                <p>
                   <LanguageSwitch en={description.en} it={description.it} />
                 </p>
                 <div

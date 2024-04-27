@@ -1,4 +1,5 @@
 import LanguageSwitch from "@/components/Utility/LanguageSwitch";
+import PhoneSwitch from "./PhoneSwitch";
 
 const ContactsStage = () => {
   return (
@@ -14,10 +15,7 @@ const ContactsStage = () => {
           <a href="mailto:dminicelli@gmail.com">dminicelli@gmail.com</a>
         </div>
         <div className="mb-2 mt-4">
-          <h3>
-            <LanguageSwitch en="Phone" it="Tel." />
-          </h3>
-          <a href="tel:+447535867090">+44 7535 867090</a>
+          <PhoneSwitch />
         </div>
         <div className="mb-2 mt-4">
           <h3>

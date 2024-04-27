@@ -136,18 +136,20 @@ const SkillsStage = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden lg:w-screen">
       <header className="mb-8">
-        <h1 className="main-title">Skills</h1>
-        <h2 className="main-subtitle">
-          <LanguageSwitch en="Styling & Animations" it="Styling & Animazioni" />
-        </h2>
+        <h1 className="main-title">
+          <LanguageSwitch en="Skills" it="Competenze" />
+        </h1>
         <p>
           <LanguageSwitch
             en="Click/hover on each skill to learn more about it."
             it="Clicca/passa sopra ogni competenza per saperne di più."
           />
         </p>
+        <h2 className="main-subtitle">
+          <LanguageSwitch en="Styling & Animations" it="Styling & Animazioni" />
+        </h2>
       </header>
       <div className="flex flex-wrap">
         {skillsList
@@ -226,7 +228,7 @@ const SkillsStage = () => {
       </div>
       <div>
         <h2 className="main-subtitle">
-          <LanguageSwitch en="3D" it="3D" />
+          <LanguageSwitch it="In fase di studio" en="Currently Studying" />
         </h2>
         <div className="flex flex-wrap">
           {skillsList

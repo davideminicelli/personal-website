@@ -8,8 +8,8 @@ const LanguageDial = () => {
   const { language, setLanguage } = useContext(PageContext);
 
   return (
-    <div className="flex flex-nowrap gap-2 text-sm text-white">
-      <p>EN</p>
+    <div className="ml-8 flex flex-nowrap items-center gap-2 text-sm text-white">
+      <p className="leading-none">EN</p>
       <Switch
         checked={language === "it"}
         onChange={
@@ -26,7 +26,7 @@ const LanguageDial = () => {
           } inline-block h-4 w-4 transform rounded-full bg-white transition`}
         />
       </Switch>
-      <p>IT</p>
+      <p className="leading-none">IT</p>
     </div>
   );
 };
