@@ -14,7 +14,10 @@ const ListNavigation = () => {
       <div
         className="my-2 box-border flex h-16 items-center justify-start rounded-xl bg-primary bg-opacity-75 p-4 duration-200 hover:bg-accent-off lg:my-0"
         onClick={() => {
-          if (stage !== targetStage) setStage(targetStage);
+          if (stage !== targetStage) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setStage(targetStage);
+          }
         }}
       >
         <Image
