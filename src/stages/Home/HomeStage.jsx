@@ -11,8 +11,8 @@ const HomeStage = () => {
 
       <p className="mt-4">
         <LanguageSwitch
-          it="Con quasi 3 anni di esperienza nel settore dello sviluppo web, ho affinato le mie capacità come sviluppatore web a Leeds, lavorando con una vasta gamma di clienti e progetti. Specializzato nello sviluppo front-end, eccello nella creazione di esperienze web moderne e coinvolgenti che danno priorità all'usabilità e alla funzionalità."
-          en="With almost 3 years of experience in the web development industry, I have honed my skills as a Web Developer in Leeds, working with a diverse range of clients and projects. Specializing in front-end development, I excel in crafting modern and engaging web experiences that prioritize usability and functionality."
+          it="Grazie alla mia esperienza nel settore dello sviluppo web, ho affinato le mie capacità come sviluppatore web a Leeds, lavorando con una vasta gamma di clienti e progetti. Specializzato nello sviluppo front-end, eccello nella creazione di esperienze web moderne e coinvolgenti che danno priorità all'usabilità e alla funzionalità."
+          en="Thanks to my experience in the web development industry, I have honed my skills as a Web Developer in Leeds, working with a diverse range of clients and projects. Specializing in front-end development, I excel in crafting modern and engaging web experiences that prioritize usability and functionality."
         />
       </p>
       <p className="mt-4">

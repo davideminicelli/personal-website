@@ -7,6 +7,11 @@ import { useContext } from "react";
 const Navbar = () => {
   const { language, setStage } = useContext(PageContext);
 
+  const handleClick = (stage) => {
+    setStage(stage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <nav className="fixed left-0 top-0 hidden w-full bg-primary md:block">
       <div className="mx-auto flex h-24 w-10/12 max-w-screen-lg items-center text-white">
@@ -21,25 +26,25 @@ const Navbar = () => {
               className="mx-auto mr-4 flex list-none justify-between gap-4 leading-none"
             >
               <li
-                onClick={() => setStage("home")}
+                onClick={() => handleClick("home")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off "
               >
                 Home
               </li>
               <li
-                onClick={() => setStage("skills")}
+                onClick={() => handleClick("skills")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off"
               >
                 Skills
               </li>
               <li
-                onClick={() => setStage("contacts")}
+                onClick={() => handleClick("contacts")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off"
               >
                 Contacts
               </li>
               <li
-                onClick={() => setStage("career")}
+                onClick={() => handleClick("career")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off"
               >
                 Career
@@ -55,25 +60,25 @@ const Navbar = () => {
               className="mx-auto mr-4 flex list-none justify-between gap-4 leading-none"
             >
               <li
-                onClick={() => setStage("home")}
+                onClick={() => handleClick("home")}
                 className=":text-accent-off cursor-pointer leading-none"
               >
                 Home
               </li>
               <li
-                onClick={() => setStage("skills")}
+                onClick={() => handleClick("skills")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off"
               >
                 Competenze
               </li>
               <li
-                onClick={() => setStage("contacts")}
+                onClick={() => handleClick("contacts")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off"
               >
                 Contatti
               </li>
               <li
-                onClick={() => setStage("career")}
+                onClick={() => handleClick("career")}
                 className="cursor-pointer leading-none duration-200 hover:text-accent-off"
               >
                 Carriera

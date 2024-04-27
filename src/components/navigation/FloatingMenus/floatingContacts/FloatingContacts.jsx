@@ -1,14 +1,34 @@
-import LanguageDial from "@/components/Buttons/LanguageDial";
-import LanguageSwitch from "@/components/Utility/LanguageSwitch";
-import { PageContext } from "@/contexts/PageContext";
-import { AnimatePresence, motion } from "framer-motion";
-import { useContext } from "react";
+"use client";
 
-const FloatingContacts = () => {
-  const { language, setStage } = useContext(PageContext);
+import LanguageSwitch from "@/components/Utility/LanguageSwitch";
+import { useEffect, useRef } from "react";
+
+const FloatingContacts = ({ setIsContactsOpen }) => {
+  const node = useRef();
+
+  const handleClickOutside = (e) => {
+    if (node.current.contains(e.target)) {
+      // inside click
+      return;
+    }
+    // outside click
+    setIsContactsOpen(false);
+  };
+
+  useEffect(() => {
+    // add when mounted
+    document.addEventListener("mousedown", handleClickOutside);
+    // return function to be called when unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <div className="mx-auto bg-primary p-6 pb-12 font-bold text-white">
+    <div
+      className="mx-auto bg-primary p-6 pb-12 font-bold text-white"
+      ref={node}
+    >
       <div
         key="en_nav"
         initial={{ opacity: 0, y: -20 }}

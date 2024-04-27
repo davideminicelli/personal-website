@@ -1,10 +1,32 @@
+"use client";
+
 import LanguageDial from "@/components/Buttons/LanguageDial";
 import LanguageSwitch from "@/components/Utility/LanguageSwitch";
 import { PageContext } from "@/contexts/PageContext";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 
-const FloatingNav = ({ setIsOpen }) => {
+const FloatingNav = ({ setIsOpen, setIsContactsOpen }) => {
   const { stage, setStage } = useContext(PageContext);
+
+  const node = useRef();
+
+  const handleClickOutside = (e) => {
+    if (node.current.contains(e.target)) {
+      // inside click
+      return;
+    }
+    // outside click
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    // add when mounted
+    document.addEventListener("mousedown", handleClickOutside);
+    // return function to be called when unmounted
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const FloatingItem = ({ targetStage, children }) => {
     return (
@@ -12,6 +34,7 @@ const FloatingNav = ({ setIsOpen }) => {
         onClick={() => {
           setIsOpen(false);
           if (stage !== targetStage) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
             setStage(targetStage);
           }
         }}
@@ -23,7 +46,10 @@ const FloatingNav = ({ setIsOpen }) => {
   };
 
   return (
-    <div className="mx-auto bg-primary p-6 text-2xl font-bold text-white">
+    <div
+      className="mx-auto bg-primary p-6 text-2xl font-bold text-white"
+      ref={node}
+    >
       <ul
         key="en_nav"
         initial={{ opacity: 0, y: -20 }}
@@ -31,27 +57,15 @@ const FloatingNav = ({ setIsOpen }) => {
         exit={{ opacity: 0, y: 20 }}
         className="floating-menu-list"
       >
-        {/* <li onClick={() => setStage("home")} className="floating-menu-item">
-          <LanguageSwitch en="Home" it="Home" />
-        </li> */}
         <FloatingItem targetStage="home">
           <LanguageSwitch en="Home" it="Home" />
         </FloatingItem>
-        {/* <li onClick={() => setStage("skills")} className="floating-menu-item">
-          <LanguageSwitch en="Skills" it="Competenze" />
-        </li> */}
         <FloatingItem targetStage="skills">
           <LanguageSwitch en="Skills" it="Competenze" />
         </FloatingItem>
-        {/* <li onClick={() => setStage("contacts")} className="floating-menu-item">
-          <LanguageSwitch en="Contacts" it="Contatti" />
-        </li> */}
         <FloatingItem targetStage="contacts">
           <LanguageSwitch en="Contacts" it="Contatti" />
         </FloatingItem>
-        {/* <li onClick={() => setStage("career")} className="floating-menu-item">
-          <LanguageSwitch en="Career" it="Carriera" />
-        </li> */}
         <FloatingItem targetStage="career">
           <LanguageSwitch en="Career" it="Carriera" />
         </FloatingItem>

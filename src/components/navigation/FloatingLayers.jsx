@@ -21,7 +21,11 @@ const FloatingLayers = () => {
         <div
           className={`fixed right-6 top-6 z-10 flex overflow-hidden rounded-full`}
         >
-          <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
+          <Burger
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            setIsContactsOpen={setIsContactsOpen}
+          />
           <ContactsBurger
             isOpen={isContactsOpen}
             setIsOpen={setIsContactsOpen}
@@ -35,7 +39,10 @@ const FloatingLayers = () => {
         className={`fixed left-0 w-full bg-primary text-white ${isContactsOpen ? "bottom-0" : "-bottom-full"} z-10 duration-300 ease-in-out`}
       >
         <div className="fixed bottom-6 right-6 z-10"></div>
-        <FloatingContacts />
+        <FloatingContacts
+          setIsOpen={setIsOpen}
+          setIsContactsOpen={setIsContactsOpen}
+        />
       </div>
     </div>
   );
