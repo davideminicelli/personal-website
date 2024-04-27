@@ -2,7 +2,6 @@
 
 import LanguageSwitch from "@/components/Utility/LanguageSwitch";
 import { PageContext } from "@/contexts/PageContext";
-import { Listbox } from "@headlessui/react";
 import Image from "next/image";
 import { useContext } from "react";
 

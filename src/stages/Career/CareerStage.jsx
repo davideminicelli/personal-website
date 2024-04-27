@@ -32,7 +32,7 @@ const CareerStage = () => {
           />
         </p>
         <div className="my-6">
-          <h3 className="font-base mb-1 mt-2 text-xl text-white underline">
+          <h3 className="font-base mb-1 mt-2 text-xl font-bold text-primary  underline">
             <LanguageSwitch it="Responsabilità" en="Main Responsibilities" />
           </h3>
           <ul className="ml-4">
@@ -75,7 +75,7 @@ const CareerStage = () => {
           </ul>
         </div>
         <div className="my-6">
-          <h3 className="font-base mb-1 mt-2 text-xl text-white underline">
+          <h3 className="font-base mb-1 mt-2 text-xl font-bold text-primary underline">
             <LanguageSwitch it="Competenze" en="Skills" />
           </h3>
           <ul className="ml-4">
