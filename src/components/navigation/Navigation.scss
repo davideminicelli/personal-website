@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .burgerLine {
+      @apply h-1 w-full duration-200 ease-in-out;
+    }
+
+    .burgerLine-thick {
+      @apply h-[6px] w-full duration-200 ease-in-out;
+    }
+
+    .floating-menu-list {
+      @apply mx-auto flex list-none flex-col justify-between;
+    }
+
+    .floating-menu-item {
+      @apply cursor-pointer leading-none hover:text-accent-off py-4 duration-200;
+    }
+  }
