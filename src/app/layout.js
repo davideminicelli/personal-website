@@ -9,6 +9,14 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata = {
   title: "Davide Minicelli - Web Developer",
   description: "Sviluppatore front end / Front end developer",
+  OpenGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://davideminicelli.com",
+    title: "Davide Minicelli - Web Developer",
+    description: "Sviluppatore front end / Front end developer",
+    site_name: "Davide Minicelli - Web Developer",
+  },
 };
 
 export default function RootLayout({ children }) {
