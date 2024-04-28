@@ -19,14 +19,12 @@ const FloatingNav = ({ setIsOpen, setIsContactsOpen }) => {
     setIsOpen(false);
   };
 
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener("mousedown", handleClickOutside);
-    // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   const FloatingItem = ({ targetStage, children }) => {
     return (

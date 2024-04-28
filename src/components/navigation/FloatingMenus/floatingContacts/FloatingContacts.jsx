@@ -15,14 +15,12 @@ const FloatingContacts = ({ setIsContactsOpen }) => {
     setIsContactsOpen(false);
   };
 
-  useEffect(() => {
-    // add when mounted
-    document.addEventListener("mousedown", handleClickOutside);
-    // return function to be called when unmounted
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, []);
 
   return (
     <div
