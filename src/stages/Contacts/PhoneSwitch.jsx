@@ -15,7 +15,7 @@ const PhoneSwitch = () => {
           exit={{ opacity: 0, y: 10 }}
         >
           <h3>Tel. </h3>
-          <a href="tel:+393206568198">+39 320 6568198</a>
+          <a href="tel:+393277275712">+39 327 7275712</a>
         </motion.div>
       )}
       {language === "en" && (
