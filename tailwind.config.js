@@ -21,7 +21,11 @@ module.exports = {
         // primary and secondary
         "primary": "var(--primary-color)",
         "secondary": "var(--secondary-color)",
-      }
+      },
+      fontFamily: {
+        nunito: ["var(--font-nunito)", "serif"],
+        montserrat: ["var(--font-montserrat)", "serif"],
+      },
     },
   },
   plugins: [],

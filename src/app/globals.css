@@ -30,7 +30,7 @@ body {
 @layer components {
 
 .main-title {
-  @apply text-5xl uppercase text-accent;
+  @apply text-5xl uppercase text-accent font-nunito;
 }
 
 .main-subtitle {
