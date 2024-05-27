@@ -6,6 +6,7 @@ export const CardsForm = () => {
   const [cardName, setCardName] = useState("");
   const [innerSleeve, setInnerSleeve] = useState(false);
   const [rarity, setRarity] = useState("Rare");
+  const [foil, setFoil] = useState(false);
 
   return (
     <main>
@@ -32,6 +33,19 @@ export const CardsForm = () => {
                 onChange={(e) => setInnerSleeve(e.target.checked)}
               />
               <label htmlFor="inner-sleeve">Inner Sleeve</label>
+            </div>
+          </div>
+          {/* set foil either false or true */}
+          <div className="input-group">
+            <div className="flex gap-4">
+              <input
+                id="foil-input"
+                type="checkbox"
+                className="h-10 w-10"
+                checked={foil}
+                onChange={(e) => setFoil(e.target.checked)}
+              />
+              <label htmlFor="foil-input">Foil</label>
             </div>
           </div>
           {/* set rarity, options: Common, Uncommon, Rare, Mythic Rare, radio buttons */}
@@ -90,13 +104,13 @@ export const CardsForm = () => {
               <h2 className="mb-2 mt-8 font-heading text-2xl font-bold leading-none">
                 title:
               </h2>
-              <p className="text-3xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (Near Mint) ${rarity}`}</p>
+              <p className="text-3xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (Near Mint) ${rarity} ${foil ? "FOIL" : ""}`}</p>
             </div>
             <div>
               <h2 className="mb-2 mt-8 font-heading text-2xl font-bold leading-none">
                 Description:
               </h2>
-              <p className="text-3xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (near Mint) ${rarity} - delivered with padding + ${innerSleeve ? "inner and " : ""}outer sleeve`}</p>
+              <p className="text-3xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (near Mint) ${rarity} ${foil ? "FOIL " : ""}- delivered with padding + ${innerSleeve ? "inner and " : ""}outer sleeve`}</p>
             </div>
           </div>
         </div>
