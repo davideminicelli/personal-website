@@ -9,7 +9,7 @@ const LanguageDial = () => {
 
   return (
     <div className="ml-8 flex flex-nowrap items-center gap-2 text-sm text-white">
-      <p className="leading-none">EN</p>
+      <p className="leading-none">en</p>
       <Switch
         checked={language === "it"}
         onChange={
@@ -19,14 +19,13 @@ const LanguageDial = () => {
           language === "it" ? "bg-background" : "bg-gray-200"
         } relative inline-flex h-6 w-11 items-center rounded-full`}
       >
-        <span className="sr-only">Enable notifications</span>
         <span
           className={`${
             language === "it" ? "translate-x-6" : "translate-x-1"
           } inline-block h-4 w-4 transform rounded-full bg-white transition`}
         />
       </Switch>
-      <p className="leading-none">IT</p>
+      <p className="leading-none">it</p>
     </div>
   );
 };

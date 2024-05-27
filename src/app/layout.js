@@ -1,14 +1,15 @@
-import { Montserrat, Nunito } from "next/font/google";
-import "./globals.css";
+import { Montserrat, Major_Mono_Display } from "next/font/google";
 import PageContextProvider from "@/contexts/PageContext";
 import Navbar from "@/components/navigation/Navbar";
 import FloatingLayers from "@/components/navigation/FloatingLayers";
+import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"],
   variable: "--font-montserrat"
  });
-const nunito = Nunito({ subsets: ["latin"],
-  variable: "--font-nunito"
+const headingFont = Major_Mono_Display({ subsets: ["latin"],
+  variable: "--font-heading",
+  weight: "400",
  });
 
 export const metadata = {
@@ -28,13 +29,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <PageContextProvider>
-        <body className={`${montserrat.variable} ${nunito.variable} relative flex flex-col min-h-screen justify-start`}>
+        <body className={`${montserrat.variable} ${headingFont.variable} relative flex flex-col min-h-screen justify-start`}>
           <Navbar />
           <FloatingLayers />
-          <div className="mt-24 w-11/12 max-w-screen-lg mx-auto">
           {children}
-          </div>
-          </body>
+        </body>
       </PageContextProvider>
     </html>
   );

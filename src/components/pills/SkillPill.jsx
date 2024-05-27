@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import LanguageSwitch from "../Utility/LanguageSwitch";
 
-const SkillPill = ({ imageUrl, delay, description, children }) => {
+const SkillPill = ({ imageUrl, delay, description, inView, children }) => {
   const [showDesc, setShowDesc] = useState(false);
   const [isStill, setIsStill] = useState(false);
 
@@ -29,17 +29,30 @@ const SkillPill = ({ imageUrl, delay, description, children }) => {
     };
   }, []);
 
+  useEffect(() => {
+    if (inView) {
+      const timer = setTimeout(() => {
+        setIsStill(true);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [inView]);
+
   return (
     <motion.div
       ref={node}
       className="relative"
       initial={{ x: "100vw", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      onHoverStart={() => setShowDesc(true)}
+      animate={{ x: inView ? 0 : "100vw", opacity: 1 }}
+      onHoverStart={() => {
+        if (isStill) {
+          console.info("hover start");
+          setShowDesc(true);
+        } else return;
+      }}
       onHoverEnd={() => setShowDesc(false)}
       onBlur={() => setShowDesc(false)}
       onClick={() => setShowDesc(!showDesc)}
-      onAnimationComplete={() => setIsStill(true)}
       transition={{
         delay,
         duration: 0.5,

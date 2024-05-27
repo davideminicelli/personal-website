@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-group {
+    @apply my-10 flex flex-col;
+    label {
+        @apply text-lg font-bold mb-2;
+    }
+    input {
+        @apply p-4;
+    }
+}

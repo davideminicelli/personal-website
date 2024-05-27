@@ -6,19 +6,20 @@
   --background-color: #262336;
   --copy-color: #030303;
   --accent-color: #f8911c;
-  --accent-off-color: #b84f2f;
+  --accent-off-color: #45e6a6;
   --primary-color: #f8911c;
   --secondary-color: #f8911c;
 }
 
 
 body {
-  background-color: #262336;
-  background-image: url("/images/texture.svg");
-  background-repeat: repeat;
-  background-attachment: fixed;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+section {
+  @apply p-5 md:p-8;
+ min-height: 650px;
 }
 
 @layer utilities {
@@ -29,12 +30,142 @@ body {
 
 @layer components {
 
+
+  /* COPY */
 .main-title {
-  @apply text-5xl uppercase text-accent font-nunito;
+  @apply text-5xl text-white font-heading;
 }
 
 .main-subtitle {
   @apply mb-3 mt-5 text-3xl font-medium text-accent-off;
 }
 
+
+/* SECTION BACKGROUNDS */
+.background-section {
+  @apply bg-background bg-center bg-opacity-25 bg-cover bg-no-repeat;
+}
+
+.max-width-container {
+  @apply w-11/12 mx-auto max-w-screen-lg;
+
+}
+
+.intro-section {
+  background-attachment: fixed;
+  background-image:
+  /* top, transparent black, faked with gradient */ 
+  linear-gradient(
+    #262336aa, 
+    #262336aa
+  ),url("/images/backgrounds/intro-bg-xs.jpg");
+}
+/* sizes 768, 1200, 1900, 2500, 3700 */
+@media only screen and (min-width: 768px) {
+  .intro-section {
+    background-image:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      #262336aa, 
+      #262336aa
+    ),url("/images/backgrounds/intro-bg-sm.jpg");
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro-section {
+    background-image:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      #262336aa, 
+      #262336aa
+    ),url("/images/backgrounds/intro-bg-md.jpg");
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .intro-section {
+    background-image:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      #262336aa, 
+      #262336aa
+    ),url("/images/backgrounds/intro-bg-lg.jpg");
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .intro-section {
+    background-image:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      #262336aa, 
+      #262336aa
+    ),url("/images/backgrounds/intro-bg-xl.jpg");
+  }
+}
+
+@media only screen and (min-width: 3700px) {
+  .intro-section {
+    background-image:
+    /* top, transparent black, faked with gradient */ 
+    linear-gradient(
+      #262336aa, 
+      #262336aa
+    ),url("/images/backgrounds/intro-bg-xxl.jpg");
+  }
+}
+}
+
+.skills-section {
+  background-attachment: fixed;
+  background-image:url("/images/backgrounds/skills-bg-xs.jpg");
+}
+
+/* sizes 768, 1200, 1900, 2500, 3700 */
+
+@media only screen and (min-width: 768px) {
+  .skills-section {
+    background-image:url("/images/backgrounds/skills-bg-sm.jpg");
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .skills-section {
+    background-image:url("/images/backgrounds/skills-bg-md.jpg");
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .skills-section {
+    background-image:url("/images/backgrounds/skills-bg-lg.jpg");
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .skills-section {
+    background-image:url("/images/backgrounds/skills-bg-xl.jpg");
+  }
+}
+
+@media only screen and (min-width: 3700px) {
+  .skills-section {
+    background-image:url("/images/backgrounds/skills-bg-xxl.jpg");
+  }
+}
+
+.intro-card {
+  background-attachment: fixed;
+  background-image:
+  /* top, transparent black, faked with gradient */ 
+  linear-gradient(
+    #262336aa, 
+    #262336aa
+  ),url('/images/backgrounds/skills-bg-xs.jpg');
+}
+
+.client-card {
+  /* inner shadow */
+  box-shadow: 10px 10px 0px 0px #f8911c;
+  
 }

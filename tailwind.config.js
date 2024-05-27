@@ -23,7 +23,7 @@ module.exports = {
         "secondary": "var(--secondary-color)",
       },
       fontFamily: {
-        nunito: ["var(--font-nunito)", "serif"],
+        heading: ["var(--font-heading)", "serif"],
         montserrat: ["var(--font-montserrat)", "serif"],
       },
     },

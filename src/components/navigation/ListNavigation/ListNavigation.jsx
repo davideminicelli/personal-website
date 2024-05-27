@@ -37,25 +37,25 @@ const ListNavigation = () => {
     <div className="max-w-96 cursor-pointer grid-cols-2 gap-2 lg:grid lg:max-w-full">
       {/* home, skills, career, contacts */}
       <ListButton
-        iconUrl="/images/icon-home.svg"
+        iconUrl="/images/icons/icon-home.svg"
         targetStage="home"
         en="Home"
         it="Home"
       />
       <ListButton
-        iconUrl="/images/icon-skills.svg"
+        iconUrl="/images/icons/icon-skills.svg"
         targetStage="skills"
         en="Skills"
         it="Competenze"
       />
       <ListButton
-        iconUrl="/images/icon-work.svg"
+        iconUrl="/images/icons/icon-work.svg"
         targetStage="career"
         en="Career"
         it="Carriera"
       />
       <ListButton
-        iconUrl="/images/icon-contacts.svg"
+        iconUrl="/images/icons/icon-contacts.svg"
         targetStage="contacts"
         en="Contacts"
         it="Contatti"
