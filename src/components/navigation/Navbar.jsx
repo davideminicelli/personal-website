@@ -2,7 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import LanguageDial from "../Buttons/LanguageDial";
 import { PageContext } from "@/contexts/PageContext";
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const Navbar = () => {
@@ -22,20 +22,22 @@ const Navbar = () => {
   };
 
   // add class bgPrimary to navRef when scrolling
-  window.onscroll = () => {
-    if (navRef.current) {
-      if (window.scrollY > 30) {
-        navRef.current.classList.add("bg-primary");
-      } else {
-        navRef.current.classList.remove("bg-primary");
+  useEffect(() => {
+    window.onscroll = () => {
+      if (navRef.current) {
+        if (window.scrollY > 30) {
+          navRef.current.classList.add("bg-primary");
+        } else {
+          navRef.current.classList.remove("bg-primary");
+        }
       }
-    }
-  };
+    };
+  }, []);
 
   return (
     <nav
       ref={navRef}
-      className="font-heading fixed left-0 top-0 z-10 hidden w-full duration-200 md:block"
+      className="fixed left-0 top-0 z-10 hidden w-full font-heading duration-200 md:block"
     >
       <div className="mx-auto flex h-24 w-10/12 max-w-screen-lg items-center text-white">
         <Image
