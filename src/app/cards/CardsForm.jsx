@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export const CardsForm = () => {
   const [cardName, setCardName] = useState("");
-  const [innerSleeve, setInnerSleeve] = useState(false);
   const [rarity, setRarity] = useState("Rare");
   const [foil, setFoil] = useState(false);
 
@@ -21,19 +20,6 @@ export const CardsForm = () => {
               value={cardName}
               onChange={(e) => setCardName(e.target.value)}
             />
-          </div>
-          {/* set inner sleeve either false or true */}
-          <div className="input-group">
-            <div className="flex gap-4">
-              <input
-                id="inner-sleeve"
-                type="checkbox"
-                className="h-10 w-10"
-                checked={innerSleeve}
-                onChange={(e) => setInnerSleeve(e.target.checked)}
-              />
-              <label htmlFor="inner-sleeve">Inner Sleeve</label>
-            </div>
           </div>
           {/* set foil either false or true */}
           <div className="input-group">
@@ -102,15 +88,21 @@ export const CardsForm = () => {
           <div>
             <div className="result">
               <h2 className="mb-2 mt-8 font-heading text-2xl font-bold leading-none">
+                ebay:
+              </h2>
+              <p className="text-xl font-bold">{`mtg ${cardName}`}</p>
+            </div>
+            <div className="result">
+              <h2 className="mb-2 mt-8 font-heading text-2xl font-bold leading-none">
                 title:
               </h2>
-              <p className="text-3xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (Near Mint) ${rarity} ${foil ? "FOIL" : ""}`}</p>
+              <p className="text-xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (Near Mint) ${rarity} ${foil ? "FOIL" : ""}`}</p>
             </div>
             <div>
               <h2 className="mb-2 mt-8 font-heading text-2xl font-bold leading-none">
                 Description:
               </h2>
-              <p className="text-3xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (near Mint) ${rarity} ${foil ? "FOIL " : ""}- delivered with padding + ${innerSleeve ? "inner and " : ""}outer sleeve`}</p>
+              <p className="text-xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (near Mint) ${rarity} ${foil ? "FOIL " : ""}- delivered with padding + inner and outer sleeve`}</p>
             </div>
           </div>
         </div>
