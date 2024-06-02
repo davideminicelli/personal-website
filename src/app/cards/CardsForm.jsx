@@ -102,7 +102,7 @@ export const CardsForm = () => {
               <h2 className="mb-2 mt-8 font-heading text-2xl font-bold leading-none">
                 Description:
               </h2>
-              <p className="text-xl font-bold">{`MTG Magic the Gathering - ${cardName} - N/M (near Mint) ${rarity} ${foil ? "FOIL " : ""}- delivered with padding + inner and outer sleeve`}</p>
+              <p className="text-xl font-bold">{`BUY MULTIPLE ITEMS FOR BUNDLE DISCOUNT - MTG Magic the Gathering - ${cardName} - N/M (near Mint) ${rarity} ${foil ? "FOIL " : ""}- delivered with padding + inner and outer sleeve`}</p>
             </div>
           </div>
         </div>
