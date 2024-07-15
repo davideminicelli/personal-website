@@ -26,7 +26,7 @@ const CareerStage = () => {
           <LanguageSwitch en="Career" it="Carriera" />
         </h1>
         <div className="my-8">
-          <h2 className="font-heading mb-2 text-3xl/none leading-none">
+          <h2 className="mb-2 font-heading text-3xl/none leading-none">
             <LanguageSwitch
               en="Front-end web developer"
               it="Sviluppatore front-end"
@@ -164,7 +164,7 @@ const CareerStage = () => {
           <h1 className="main-title text-primary">
             <LanguageSwitch en="Clients" it="Clienti" />
           </h1>
-          <div className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
+          <div className="my-8 grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
             {clientsList.map((client, index) => (
               <div key={`client_card_key_${index}`}>
                 <ClientCard url={client.url} label={client.label} />

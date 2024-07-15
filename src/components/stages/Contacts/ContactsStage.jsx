@@ -4,7 +4,7 @@ import PhoneSwitch from "./PhoneSwitch";
 
 const ContactsStage = () => {
   return (
-    <div className="max-width-container">
+    <div className="max-width-container text-white">
       <h1 className="main-title">
         <LanguageSwitch en="Contacts" it="Contatti" />
       </h1>
